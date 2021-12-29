@@ -1,1 +1,1 @@
-from .plots import Plot, plot_data
+from .plots import Plot
