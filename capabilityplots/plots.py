@@ -7,9 +7,9 @@ from scipy import stats
 import numpy as np
 
 class Plot:
-    def __init__(self, data, lsl, usl, sixpack=False):
-        self.specNum = data[0]
-        self.data = data[1:]
+    def __init__(self, data, lsl, usl, specnum=0,sixpack=False):
+        self.specNum = specnum
+        self.data = data
         self.usl = usl
         self.lsl = lsl
         self.mR_data = [abs(self.data[x] - self.data[x-1]) for x in range(1, len(self.data))]
